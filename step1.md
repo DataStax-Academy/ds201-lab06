@@ -31,24 +31,31 @@ cd /workspace/ds201-lab06/apache-cassandra-4.1.0/bin
 ```
 ✅ Look for *nodetool* in the directory:
 ```
-ls
+ls -l
 ```
 ✅ Run *nodetool* with the help command and take your time to learn about various available commands:
 ```
-nodetool help
+./nodetool help
+```
+Some commands display information about the entire cluster and its nodes. Others may be specific to a node you connect to.
+
+✅ Run nodetool with the  `describecluster` command to display high-level information about the cluster:
+```
+./nodetool describecluster
 ```
 
-In the file find:
+✅ Run nodetool with the `status` command to display information about all nodes in the cluster:
+```
+./nodetool status
+```
 
-`# initial_token:`
+For each node, you should be able to see its state, IP address, load, and so forth. 
 
-Un-comment and change `initial_token` value setting it to `-9223372036854775808`. This will allow *node2* to manage half of the token range – all of the positive tokens and one negative token of `-9223372036854775808`
-
-The new entry should look like:
-
-`initial_token: -9223372036854775808`
-
-Save and exit the editor.
+✅ Run nodetool with the `info` command to display information about this node:
+```
+./nodetool info
+```
+Take your time to read through all the information pieces.
 
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">

@@ -20,45 +20,44 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Start the nodes in the cluster</div>
+<div class="step-title">Create the <i>killrvideo</i> keyspace and the <i>videos</i> table</div>
 
 
-✅ Start *node1*
+✅ Start *cqlsh*
 ```
-/workspace/ds201-lab06/node1/bin/cassandra
+./cqlsh
 ```
----
-**Note:** You may see a `java.net.ConnectionError`, this is because this server is looking for a seed node but it is the first node in the cluster so there are none available. This is expected behavior.
-
----
-
-
-Use `nodetool` to verify that node1 is running. (You may need to run this command multiple times.)
-
-✅ Verify that Cassandra is running.
+✅ Create the *killrvideo* keyspace:
 ```
-/workspace/ds201-lab06/node1/bin/nodetool status
+CREATE KEYSPACE killrvideo
+WITH replication = {
+  'class':'SimpleStrategy', 
+  'replication_factor': 1
+};
 ```
-
-✅ Once the first node is running, start the second node:
+✅ Use the keyspace:
 ```
-/workspace/ds201-lab06/node2/bin/cassandra
+use killrvideo;
 ```
-
-Use `nodetool` to verify that both nodes are  running. (You may need to run this command multiple times.)
-
-✅ Verify that Cassandra is running.
+✅ Create the *videos* table:
 ```
-/workspace/ds201-lab06/node1/bin/nodetool status
+CREATE TABLE videos (
+  video_id TIMEUUID,
+  added_date TIMESTAMP,
+  title TEXT,
+  PRIMARY KEY (video_id)
+);
 ```
-
-* Both nodes should be *Up* and *Normal*.
-* The *Owns* shows 100% for both nodes because no (non-system) keyspaces have been created yet.
-
-
-
-<img src="https://katapod-file-store.s3.us-west-1.amazonaws.com/ds201/lab06-image01.png" />
-
+✅ Populate the *videos* table:
+```
+COPY videos(video_id, added_date, title)
+FROM '/workspace/ds201-lab06/data-files/videos.csv'
+WITH HEADER=TRUE;
+```
+✅ Verify that the data was loaded:
+```
+SELECT * from videos;
+```
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">
   <a href='command:katapod.loadPage?[{"step":"step1"}]'
