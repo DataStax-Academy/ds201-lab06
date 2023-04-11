@@ -2,7 +2,7 @@
 <div class="top">
   <img class="scenario-academy-logo" src="https://datastax-academy.github.io/katapod-shared-assets/images/ds-academy-2023.svg" />
   <div class="scenario-title-section">
-    <span class="scenario-title">Node</span>
+    <span class="scenario-title">Nodetool</span>
     <span class="scenario-subtitle">ℹ️ For technical support, please contact us via <a href="mailto:academy@datastax.com">email</a>.</span>
   </div>
 </div>
@@ -20,14 +20,22 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Edit <i>cassandra.yaml</i> and set the token range</div>
+<div class="step-title">Create a *keyspace* and *table*</div>
 
-In this exercise there is a two-node Cassandra cluster. The root directories for the nodes are: `./node1` and `./node2`. You are going to edit the configuration file (`cassandra.yaml`) for *node2*. You are going to assign an `initial_token` value of `-9223372036854775808`
+Cassandra should be installed in `/workspace/ds201-lab06/apache-cassandra-4.1.0/`.
 
 
-✅ Open `/workspace/ds201-lab06/node2/conf/cassandra.yaml` in a *nano* or the text editor of your choice.
+✅ Change to the `./bin` directory:
 ```
-nano /workspace/ds201-lab06/node2/conf/cassandra.yaml
+cd /workspace/ds201-lab06/apache-cassandra-4.1.0/bin
+```
+✅ Look for *nodetool* in the directory:
+```
+ls
+```
+✅ Run *nodetool* with the help command and take your time to learn about various available commands:
+```
+nodetool help
 ```
 
 In the file find:

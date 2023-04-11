@@ -1,6 +1,6 @@
 # DS201 Exercise 06
 
-## Node
+## Nodetool
 
 **In this hands-on lab, you will:**
 * Learn more about nodetool, its commands and options
