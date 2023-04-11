@@ -3,8 +3,8 @@
 ## Node
 
 **In this hands-on lab, you will:**
-*Learn more about nodetool, its commands and options
-*Use nodetool with several common commands
+* Learn more about nodetool, its commands and options
+* Use nodetool with several common commands
 
 
 
