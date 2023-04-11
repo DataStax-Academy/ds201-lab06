@@ -59,6 +59,7 @@ WITH HEADER=TRUE;
 SELECT * from videos;
 ```
 You should see that six rows have been added to the table.
+
 ✅ Exit *cqlsh*:
 ```
 exit
