@@ -15,7 +15,7 @@
   <a href='command:katapod.loadPage?[{"step":"step3"}]' 
     class="btn btn-dark navigation-top-right">Next ➡️
   </a>
-<span class="step-count"> Step 2 of 4</span>
+<span class="step-count"> Step 2 of 3</span>
 </div>
 
 <!-- CONTENT -->
@@ -57,6 +57,11 @@ WITH HEADER=TRUE;
 ✅ Verify that the data was loaded:
 ```
 SELECT * from videos;
+```
+You should see that six rows have been added to the table.
+✅ Exit *cqlsh*:
+```
+exit
 ```
 <!-- NAVIGATION -->
 <div id="navigation-bottom" class="navigation-bottom">

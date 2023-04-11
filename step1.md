@@ -15,7 +15,7 @@
    <a href='command:katapod.loadPage?[{"step":"step2"}]' 
     class="btn btn-dark navigation-top-right">Next ➡️
   </a>
-<span class="step-count"> Step 1 of 4</span>
+<span class="step-count"> Step 1 of 3</span>
 </div>
 
 <!-- CONTENT -->
@@ -38,6 +38,11 @@ ls -l
 ./nodetool help
 ```
 Some commands display information about the entire cluster and its nodes. Others may be specific to a node you connect to.
+
+---
+**Note:** The following commands have to connect to a running Cassandra node to get information about the cluster. You may have to run them more than once if your node(s) are not yet up.
+
+---
 
 ✅ Run nodetool with the  `describecluster` command to display high-level information about the cluster:
 ```
