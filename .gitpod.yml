@@ -1,12 +1,12 @@
 tasks:
   - name: install-dependencies
     before: |
-      printf 'export PATH="/workspace/ds201-lab06/apache-cassandra-4.1.0/bin:$PATH"' >> $HOME/.bashrc
+      printf 'export PATH="$HOME/apache-cassandra-4.1.0/bin:$PATH"' >> $HOME/.bashrc
       printf 'unset JAVA_TOOL_OPTIONS\n' >> $HOME/.bashrc
       curl https://katapod-file-store.s3.us-west-1.amazonaws.com/ds201/lab06-environment.tar.gz \
         --output environment.tar.gz
       tar xf environment.tar.gz
-      /workspace/ds201-lab06/apache-cassandra-4.1.0/bin/cassandra
+      cassandra
     init: |
     command: | 
       clear
