@@ -13,6 +13,9 @@
    class="btn btn-dark navigation-bottom-left">⬅️ Back
  </a>
 <span class="step-count"> Step 3 of 3</span>
+ <a href='command:katapod.loadPage?[{"step":"finish"}]' 
+    class="btn btn-dark navigation-top-right">Next ➡️
+  </a>
 </div>
 
 <!-- CONTENT -->
@@ -56,7 +59,7 @@ The *SSTable count* should now be 1.
   <a href='command:katapod.loadPage?[{"step":"step2"}]'
    class="btn btn-dark navigation-bottom-left">⬅️ Back
  </a>
-   <a href='command:katapod.loadPage?[{"step":"step4"}]' 
+ <a href='command:katapod.loadPage?[{"step":"finish"}]' 
     class="btn btn-dark navigation-top-right">Next ➡️
   </a>
 </div>
