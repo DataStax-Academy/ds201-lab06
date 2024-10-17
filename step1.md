@@ -20,7 +20,7 @@
 
 <!-- CONTENT -->
 
-<div class="step-title">Create a *keyspace* and *table*</div>
+<div class="step-title">Create a <i>keyspace</i> and <i>table</i></div>
 
 Cassandra should be installed in `/workspace/ds201-lab06/apache-cassandra-4.1.0/`.
 

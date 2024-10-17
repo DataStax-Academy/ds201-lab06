@@ -29,7 +29,7 @@
 ```
 ✅ Create the *killrvideo* keyspace:
 ```
-CREATE KEYSPACE killrvideo
+CREATE KEYSPACE IF NOT EXISTS killrvideo
 WITH replication = {
   'class':'SimpleStrategy', 
   'replication_factor': 1
@@ -41,7 +41,7 @@ use killrvideo;
 ```
 ✅ Create the *videos* table:
 ```
-CREATE TABLE videos (
+CREATE TABLE IF NOT EXISTS videos (
   video_id TIMEUUID,
   added_date TIMESTAMP,
   title TEXT,
