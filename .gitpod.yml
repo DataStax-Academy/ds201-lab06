@@ -9,7 +9,7 @@ tasks:
       --output environment.tar.gz
       tar xf environment.tar.gz
     command: | 
-      ./apache-cassandra-4.1.0/bin/cassandr
+      ./apache-cassandra-4.1.0/bin/cassandra
 github:
   prebuilds:
     main: true
